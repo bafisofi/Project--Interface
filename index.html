@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>User App</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="container-bar">
+        <div class="bar-left">
+          <button class="btn" id="new-user">+ New User</button>
+        
+          <div>
+            <input type="checkbox" name="hide-user" id="hide-user"  />
+            <label for="hide-user">Hide Disabled User</label>
+          </div>
+        </div>
+
+        <button class="btn" id="save-user">Save User</button>
+      </div>
+      <div class="container-view">
+        <table class="table table-sortable">
+          <thead class="table-head">
+            <tr class="table-row">
+              <th>
+                ID
+                <a id="order" >
+                  <i class="fa fa-sort"></i>
+                  </a>
+                <a style="color: inherit;" onclick="seeInput('#id-input')">
+                  <i class="fa fa-filter fa-2x" aria-hidden="true"></i
+                >
+              </a>
+              <div >
+                <input type="text" placeholder="Filter" id="id-input" class="toggle-content search-twocol"/></div>
+              </th>
+              <th id="user-table">
+                User Name
+                <a id="order" >
+                  <i class="fa fa-sort"></i>
+                  </a>
+                <a style="color: inherit;" onclick="seeInput('#user-input')">
+                  <i class="fa fa-filter fa-2x" aria-hidden="true"></i
+                >
+              </a>
+              </a>
+                <div >
+                <input type="text" placeholder="Filter" id="user-input" class="toggle-content search-twocol"   /></div>
+                 </div>
+              </th>
+              <th>
+                Email 
+                <a id="order" >
+                  <i class="fa fa-sort"></i>
+                  </a>
+                <a style="color: inherit;" onclick="seeInput('#email-input')">
+                  <i class="fa fa-filter fa-2x" aria-hidden="true"></i
+                
+              </a>
+              <div >
+                <input type="text" placeholder="Filter" id="email-input" class="toggle-content search-twocol"  /></div>
+              </th>
+              <th>
+                Enabled
+                <a id="order" >
+                  <i class="fa fa-sort"></i>
+                  </a>
+                <a style="color: inherit;" onclick="seeInput('#enabled-input')">
+                  <i class="fa fa-filter fa-2x" aria-hidden="true"></i
+                >
+              </a>
+              <div >
+                <input type="text" placeholder="Filter" id="enabled-input" class="toggle-content search-twocol"  /></div>
+              </th>
+              <th>Actions <ion-icon name="funnel"></ion-icon></th>
+            </tr>
+          </thead>
+
+          <tbody class="table-data">
+            <tr class="table-row">
+              <td>1</td>
+              <td>AdminUser</td>
+              <td>admins@plworks.net</td>
+              <td>true</td>
+              <td>
+                <div class="table-actions">
+                  <button class="btn btn--action">Edit</button>
+                  <button class="btn btn--action">Delete</button>
+                </div>
+              </td>
+            </tr>
+      
+            <tr class="table-row">
+              <td>2</td>
+              <td>TestUser</td>
+              <td>testuser@plworks.net</td>
+              <td>true</td>
+              <td>
+                <div class="table-actions">
+                  <button class="btn btn--action">Edit</button>
+                  <button class="btn btn--action">Delete</button>
+                </div>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td>3</td>
+              <td>TestUser2</td>
+              <td>admintest@plworks.net</td>
+              <td>false</td>
+              <td>
+                <div class="table-actions">
+                  <button class="btn btn--action">Edit</button>
+                  <button class="btn btn--action">Delete</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container-form" >
+        <form action="" class="form-box">
+          <div class="form-title">
+            <p>New User</p>
+          </div>
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" />
+          </div>
+          <div class="form-group">
+            <label for="display-name"> Display Name:</label>
+            <input type="text" id="display-name" name="display-name" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="email"> Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="form-group">
+            <label for="useRole"> User Role:</label>
+            <select name="userRole" id="userRole">
+              <option value="guest">Guest</option>
+              <option value="admin">Admin</option>
+              <option value="super-admin">SuperAdmin</option>
+            </select>
+          </div>
+          <div class="form-group checkbox-container">
+            <label for="enabled">Enabled</label>
+            <input type="checkbox" id="enabled" name="enabled" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
